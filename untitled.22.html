@@ -1,0 +1,41 @@
+<html>
+
+<head>
+  <title> Family book </title>
+</head>
+
+<body>
+  <audio id="audio" src="https://www.youtube.com/watch?v=1McPiczNkGg">
+  </audio>
+  <p id="firstp"> Family book</p>
+  <p> Here are 5 Family members </p>
+  <img id="album" src="https://tse3.mm.bing.net/th?id=OIP.wLGv9iOo7i507GtNMhBD-gHaE8&pid=Api&P=0&w=234&h=157">
+  <div>
+    <button type="button" onclick="nextslide()"> Click me </button>
+  </div>
+  <p id=reasontext1> 1.Mother </p>
+
+</body>
+
+</html>
+<script>
+var reasons = [
+  "Mother",
+  "Father",
+  "Brother",
+  "Sister"
+];
+var images = [
+  "https://tse3.mm.bing.net/th?id=OIP.wLGv9iOo7i507GtNMhBD-gHaE8&pid=Api&P=0&w=234&h=157",
+  "http://static.oprah.com/images/spirit/201006/20100601-sad-father-600x411.jpg",
+  "https://www.cheatsheet.com/wp-content/uploads/2018/06/jc-monduix-big-brother.jpg",
+  "https://tse3.mm.bing.net/th?id=OIP.5Rmco1Q61pGeDG59lfpNLAHaFj&pid=Api&P=0&w=244&h=184"
+];
+var i = 0;
+function nextslide() {
+  document.getElementById("album").src = images[i];
+  document.getElementById("reasontext1").innerHTML = reasons[i];
+  i++;
+  document.getElementById("audio").play();
+}
+</script>
